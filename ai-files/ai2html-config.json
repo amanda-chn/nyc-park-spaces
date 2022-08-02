@@ -1,0 +1,16 @@
+{
+    "fonts": [
+        {
+            "aifont": "LibreFranklinRoman-Bold",
+            "family": "Libre Franklin",
+            "weight": "600",
+            "style": ""
+        },
+        {
+            "aifont": "LibreFranklinRoman-Regular",
+            "family": "Libre Franklin",
+            "weight": "400",
+            "style": ""
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+
+      /* scrolly */
+      #scrolly {
+        position: relative;
+        padding: 1rem;
+      }
+
+      .scrolly-overlay {
+        position: relative;
+        padding: 0;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 0;
+        top: 0;
+        height: 100vh;
+        /* Center everything inside */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .step {
+        margin: 0 auto 2rem auto;
+        margin-bottom: 25rem;
+        background-color: #eee;
+        background-color: #fff;
+        color: black;
+      }
+
+      .step p {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: #1d1d1d;
+      }
+
+     #last{
+        margin: 0 auto 2rem auto;
+        margin-bottom: 12rem;
+        background-color: rgba(0, 0, 0, 0)!important;
+      }
+
+      .hidden { visibility: hidden; }
+
+      /* When it's less than 700 pixels wide, do normal scrollytelling */
+      @media only screen and (min-width: 700px) {
+        #scrolly.side-by-side {
+          display: flex;
+        }
+
+        #scrolly.side-by-side > div {
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+          padding: 0.75em;
+        }
+
+        #scrolly.side-by-side .scrolly-overlay {
+          margin-top: 70vh;
+          order: 0;
+          /* Change these to adjust sizing options */
+          min-width: 15rem;
+          max-width: 20rem;
+        }
+
+        #scrolly.side-by-side .sticky-thing {
+          order: 1;
+          flex-grow: 2;
+        }
+
+        /* my styling */
+        .ai2html {
+          max-width: 600px;
+          margin: auto;
+        }
+
+        .text {
+            max-width: 600px;
+            margin: auto;
+            font-family: 'Poppins', sans-serif;
+            color: #1d1d1d;
+        }
+
+        .title h1{
+            max-width: 800px;
+            text-align: center;
+            margin: auto;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+            font-size: 42px;
+            font-family: 'Poppins', sans-serif;
+            color: #1d1d1d;
+        }
+
+        .title  h2{
+            max-width: 600px;
+            text-align: center;
+            margin: auto;
+            padding-bottom: 1rem;
+            font-size: 18px;
+            font-family: 'Lora', serif !important;
+            color: #1d1d1d;
+        }
+
+        .img {
+            margin: auto 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .title  h3{
+            max-width: 600px;
+            text-align: center;
+            margin: auto;
+            padding-top: 3rem;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: #1d1d1d;
+        }
+
+
+        .ai2html .container{
+            max-width: 100%;
+            margin: auto;
+          }
+
+        }
