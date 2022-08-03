@@ -126,11 +126,11 @@
         .title p {
           margin: auto 0;
           padding-top: 5px;
-            display: flex;
-            justify-content: center;
-            font-family: 'Poppins', sans-serif;
-            color: #888888;
-            font-size: 12px;
+          display: flex;
+          justify-content: center;
+          font-family: 'Poppins', sans-serif;
+          color: #888888;
+          font-size: 12px;
         }
 
         .title  h3{
