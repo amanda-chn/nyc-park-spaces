@@ -1,4 +1,6 @@
-
+body {
+  margin: 0;
+}
       /* scrolly */
       #scrolly {
         position: relative;
@@ -91,15 +93,33 @@
             color: #1d1d1d;
         }
 
+        .one{
+          padding-top: 3em;
+      }
+
+        .title{
+          /* position: relative; */
+          text-align: center;
+          color: white;
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), white), url('image2.jpeg');
+          background-size: cover;
+          background-position: center center;
+          min-height: 90vh;
+
+        }
+
         .title h1{
             max-width: 800px;
-            text-align: center;
-            margin: auto;
-            padding-top: 3rem;
+            /* text-align: center; */
+            margin: 0 auto; 
+            padding-top: 12rem;
             padding-bottom: 1rem;
             font-size: 42px;
             font-family: 'Poppins', sans-serif;
             color: #1d1d1d;
+            text-shadow: 2px 2px white;
+            opacity: 1 !important;
+/* title overlay */
         }
 
         .title  h2{
@@ -110,17 +130,22 @@
             font-size: 18px;
             font-family: 'Lora', serif !important;
             color: #1d1d1d;
+            text-shadow: 1px 1px white;
+
+/* title overlay */
         }
 
-        .img {
-            margin: auto 0;
-            display: flex;
-            justify-content: center;
+        /* img {
+            width: 75%;
+            margin: 0 auto;
+            justify-content: center ;
+    } */
         }
 
         .responsive {
-          width: 50%;
+          width: 100%;
           height: auto;
+          opacity:100%;
         }
 
         .title p {
@@ -137,10 +162,13 @@
             max-width: 600px;
             text-align: center;
             margin: auto;
-            padding-top: 3rem;
+            padding-top: 1rem;
             font-size: 16px;
             font-family: 'Poppins', sans-serif;
             color: #1d1d1d;
+
+            text-shadow: 1px 1px white;
+
         }
 
 
@@ -149,7 +177,7 @@
             margin: auto;
           }
 
-        }
+    
 
         .github {
           padding-bottom: 3em;

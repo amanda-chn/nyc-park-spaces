@@ -15,7 +15,71 @@
 // })
 // 
 
-//hide what you don;t want to show first
+
+// tree map
+//base map
+d3.selectAll(".g-inaccessibleParkTypeLabels").classed("hidden", true)
+d3.selectAll(".g-inaccessibleText").classed("hidden", true)
+d3.selectAll(".g-greenparkTypeLabels").classed("hidden", true)
+
+
+
+//Scrollytelling
+d3.select("#step-1").on('stepin', function(e){
+  console.log("stepping into step one")
+  d3.selectAll(".g-greenparkTypeLabels").classed("hidden", false)
+  d3.selectAll(".g-accessibleText").classed("hidden", true)
+  d3.selectAll(".g-inaccessibleParkTypeLabels").classed("hidden", false)
+
+  
+})
+
+d3.select("#step-2").on('stepin', function(e){
+  console.log("stepping into step two")
+  d3.selectAll("[data-name='gray'] polygon").style('fill', '#888888').style('opacity', .1)
+  d3.selectAll("[data-name='gray'] rect").style('fill', '#888888').style('opacity', .1)
+  d3.selectAll("[data-name='gray'] path").style('fill', '#888888').style('opacity', .1)
+
+
+})
+
+d3.select("#step-3").on('stepin', function(e){
+  console.log("stepping into step three")
+  // d3.selectAll("[data-name='gray'] polygon").style('hidden', true)
+  // d3.selectAll("[data-name='gray'] rect").style('hidden', true)
+  // d3.selectAll("[data-name='gray'] path").classed('hidden', true)
+  // d3.selectAll(".g-inaccessibleParkTypeLabels").classed("hidden", true)
+
+
+})
+
+//step-out
+d3.select("#step-0").on('stepout', function(e){
+  console.log("stepping out of step 0")
+  d3.selectAll("[data-name='gray'] polygon").style('fill', '#B2DBAB').style('opacity', 1)
+  d3.selectAll("[data-name='gray'] rect").style('fill', '#B2DBAB').style('opacity', 1)
+  d3.selectAll("[data-name='gray'] path").style('fill', '#B2DBAB').style('opacity', 1)
+})
+d3.select("#step-1").on('stepout', function(e){
+  console.log("stepping out of step 1")
+  d3.selectAll(".g-inaccessibleParkTypeLabels").classed("hidden", true)
+  d3.selectAll(".g-greenparkTypeLabels").classed("hidden", true)
+  d3.selectAll(".g-accessibleText").classed("hidden", false)
+})
+d3.select("#step-2").on('stepout', function(e){
+  console.log("stepping out of step two")
+  d3.selectAll("[data-name='gray'] polygon").style('fill', '#B2DBAB').style('opacity', 1)
+  d3.selectAll("[data-name='gray'] rect").style('fill', '#B2DBAB').style('opacity', 1)
+  d3.selectAll("[data-name='gray'] path").style('fill', '#B2DBAB').style('opacity', 1)
+  d3.selectAll(".g-inaccessibleParkTypeLabels").classed("hidden", false)
+
+
+
+})
+
+
+// park map
+//hide what you don't want to show first
 d3.selectAll("#playgroundArrows").classed("hidden", true)
 d3.select("#commArrows").classed("hidden", true)
 d3.select("#triangleArrows").classed("hidden", true)
@@ -25,7 +89,6 @@ d3.selectAll(".g-playgrounds-labels").classed("hidden", true)
 d3.selectAll(".g-parks-labels").classed("hidden", true)
 d3.selectAll(".g-commgardens-labels").classed("hidden", true)
 
-//Scrollytelling
 //step-in
 d3.select("#step-one").on('stepin', function(e){
     console.log("stepping into step one")
@@ -54,6 +117,7 @@ d3.select("#step-two").on('stepin', function(e){
     d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
     d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
   })
+
 
 d3.select("#step-four").on('stepin', function(e){
     console.log("stepping into step four")
@@ -97,7 +161,7 @@ d3.select("#step-eight").on('stepin', function(e){
     d3.selectAll(".g-parks-labels").classed("hidden", false)
 
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
+    d3.selectAll("#playgroundLots").style('fill', '#888888').style('opacity', .25)
     d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
     d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
     d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
