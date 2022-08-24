@@ -82,7 +82,7 @@ body {
 
         /* my styling */
         .ai2html {
-          max-width: 600px;
+          max-width: 900px;
           margin: auto;
         }
 
@@ -174,7 +174,6 @@ body {
 
         .ai2html .container{
             max-width: 100%;
-            margin: auto;
           }
 
     
