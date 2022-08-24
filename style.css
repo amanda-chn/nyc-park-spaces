@@ -102,9 +102,9 @@ body {
           /* position: relative; */
           text-align: center;
           color: white;
-          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), white), url('image2.jpeg');
-          background-size: cover;
-          background-position: center center;
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), white), url('image2.jpeg');
+          background-size:cover;
+          background-position: center;
           min-height: 90vh;
 
         }
@@ -146,7 +146,6 @@ body {
         .responsive {
           width: 100%;
           height: auto;
-          opacity:100%;
         }
 
         .title p {
@@ -172,16 +171,59 @@ body {
 
         }
 
-
-        .ai2html .container{
-            max-width: 100%;
-          }
-
-    
-
         .github {
           padding-bottom: 3em;
           padding-top: 3em;
           display: flex;
           justify-content: center;
         }
+
+
+
+/* mobile */
+
+@media (max-width:750px) {
+
+  img {
+    display:block;
+    padding:0;
+  }
+	.text.container {
+		width: 90%;
+		margin: auto;
+	}
+
+  .park-map{
+    padding: 2rem;
+  }
+
+	/* h2 {
+		width: 90%;
+	}
+
+	.chart-row {
+		display:block;
+	}
+
+	.chart-row .chart {
+		padding:0;
+	}
+
+	.photo-section {
+		display:block;
+	}
+	.photo {
+		padding:0;
+	}
+
+	h1.headline {
+		font-size: 24px;
+	}
+
+	h2.subhead {
+		font-size: 16px;
+		line-height: 3vh;
+	} */
+}
+
+
