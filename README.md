@@ -16,4 +16,4 @@ Moving forward, I would like to see how ubiquitous this misportrayal is througho
 ## Repository contents
 * data analysis: Analysis of total acreage of recreational park spaces in NYC. Data from NYC Open Data. Anaylsis with pandas. 
 * ai-files: raw illustrator files of the visuals included in the story
-* ai2html-outputs: ai2html outputs to add iteractivity. 
+* ai2html-outputs: ai2html outputs to add interactivity. 
