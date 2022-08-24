@@ -80,25 +80,27 @@ d3.select("#step-2").on('stepout', function(e){
 
 // park map
 //hide what you don't want to show first
-d3.selectAll("#playgroundArrows").classed("hidden", true)
-d3.select("#commArrows").classed("hidden", true)
-d3.select("#triangleArrows").classed("hidden", true)
-d3.select("#parkArrows").classed("hidden", true)
+d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", true)
+d3.selectAll("[data-name='commArrows'] path").classed("hidden", true)
+d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", true)
+d3.selectAll("[data-name='parkArrows'] path").classed("hidden", true)
 d3.selectAll(".g-triangles-labels").classed("hidden", true)
 d3.selectAll(".g-playgrounds-labels").classed("hidden", true)
 d3.selectAll(".g-parks-labels").classed("hidden", true)
 d3.selectAll(".g-commgardens-labels").classed("hidden", true)
+// d3.selectAll("[data-name='playgroundLots'] path").classed("hidden", true)
+
 
 //step-in
 d3.select("#step-one").on('stepin', function(e){
     console.log("stepping into step one")
     
-    d3.select("#parkArrows").classed("hidden", false)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", false)
     d3.selectAll(".g-parks-labels").classed("hidden", false)
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
 
 
 
@@ -107,47 +109,75 @@ d3.select("#step-one").on('stepin', function(e){
 d3.select("#step-two").on('stepin', function(e){
     console.log("stepping into step one")
 
-    d3.select("#parkArrows").classed("hidden", true)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", true)
     d3.selectAll(".g-parks-labels").classed("hidden", true)
-    d3.select("#triangleArrows").classed("hidden", false)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", false)
     d3.selectAll(".g-triangles-labels").classed("hidden", false)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', .50)
+  })
+
+  d3.select("#step-three").on('stepin', function(e){
+    console.log("stepping into step one")
+
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", true)
+    d3.selectAll(".g-parks-labels").classed("hidden", true)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", false)
+    d3.selectAll(".g-triangles-labels").classed("hidden", false)
+
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .5)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', .50)
   })
 
 
 d3.select("#step-four").on('stepin', function(e){
     console.log("stepping into step four")
 
-    d3.select("#triangleArrows").classed("hidden", true)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", true)
     d3.selectAll(".g-triangles-labels").classed("hidden", true)
 
-    d3.select("#playgroundArrows").classed("hidden", false)
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", false)
     d3.selectAll(".g-playgrounds-labels").classed("hidden", false)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', 1)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', 'gray').style('opacity', .25)
+  })
+
+  d3.select("#step-five").on('stepin', function(e){
+    console.log("stepping into step four")
+
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", true)
+    d3.selectAll(".g-triangles-labels").classed("hidden", true)
+
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", false)
+    d3.selectAll(".g-playgrounds-labels").classed("hidden", false)
+
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .5)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', 'gray').style('opacity', .25)
   })
 
 d3.select("#step-six").on('stepin', function(e){
     console.log("stepping into step six")
   
-    d3.select("#playgroundArrows").classed("hidden", true)
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", true)
     d3.selectAll(".g-playgrounds-labels").classed("hidden", true)
 
-    d3.select("#commArrows").classed("hidden", false)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", false)
     d3.selectAll(".g-commgardens-labels").classed("hidden", false)
 
-
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='commLots'] path").style('fill', 'gray').style('opacity', 1)
+    // d3.selectAll("[data-name='parkLots'] path").style('fill', 'gray').style('opacity', .25)
 
   })
 
@@ -155,119 +185,149 @@ d3.select("#step-six").on('stepin', function(e){
 d3.select("#step-eight").on('stepin', function(e){
     console.log("stepping into step eight")
 
-    d3.select("#commArrows").classed("hidden", false)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", false)
     d3.selectAll(".g-commgardens-labels").classed("hidden", false)
-    d3.select("#parkArrows").classed("hidden", false)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", false)
     d3.selectAll(".g-parks-labels").classed("hidden", false)
 
 
-    d3.selectAll("#playgroundLots").style('fill', '#888888').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
 
   })
 
   d3.select("#step-nine").on('stepin', function(e){
     console.log("stepping into step nine")
-    d3.select("#commArrows").classed("hidden", true)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", true)
     d3.selectAll(".g-commgardens-labels").classed("hidden", true)
-    d3.select("#parkArrows").classed("hidden", false)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", false)
     d3.selectAll(".g-parks-labels").classed("hidden", false)
 
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    // d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .25)
+    // d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .25)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
   })
 
 //step-out
 d3.select("#step-nine").on('stepout', function(e){
-    d3.select("#commArrows").classed("hidden", false)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", false)
     d3.selectAll(".g-commgardens-labels").classed("hidden", false)
-    d3.select("#parkArrows").classed("hidden", false)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", false)
     d3.selectAll(".g-parks-labels").classed("hidden", false)
 
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', .50)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
   })
 
 d3.select("#step-eight").on('stepout', function(e){
     console.log("stepping out of step eight")
-    d3.select("#commArrows").classed("hidden", false)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", false)
     d3.selectAll(".g-commgardens-labels").classed("hidden", false)
-    d3.select("#parkArrows").classed("hidden", true)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", true)
     d3.selectAll(".g-parks-labels").classed("hidden", true)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
     
   })
 
 d3.select("#step-six").on('stepout', function(e){
     console.log("stepping out of step six")
 
-    d3.select("#commArrows").classed("hidden", true)
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", true)
     d3.selectAll(".g-commgardens-labels").classed("hidden", true)
-    d3.select("#playgroundArrows").classed("hidden", false)
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", false)
     d3.selectAll(".g-playgrounds-labels").classed("hidden", false)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    
+  })
+
+  d3.select("#step-five").on('stepout', function(e){
+    console.log("stepping out of step six")
+
+    d3.selectAll("[data-name='commArrows'] path").classed("hidden", true)
+    d3.selectAll(".g-commgardens-labels").classed("hidden", true)
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", false)
+    d3.selectAll(".g-playgrounds-labels").classed("hidden", false)
+
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .50)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
     
   })
 
 d3.select("#step-four").on('stepout', function(e){
     console.log("stepping out of step four")
 
-    d3.select("#playgroundArrows").classed("hidden", true)
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", true)
     d3.selectAll(".g-playgrounds-labels").classed("hidden", true)
 
-    d3.select("#triangleArrows").classed("hidden", false)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", false)
     d3.selectAll(".g-triangles-labels").classed("hidden", false)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity',.25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', .25)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity',1)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', 'gray').style('opacity', .5)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
+  })
+
+  d3.select("#step-three").on('stepout', function(e){
+    console.log("stepping out of step four")
+
+    d3.selectAll("[data-name='playgroundArrows'] path").classed("hidden", true)
+    d3.selectAll(".g-playgrounds-labels").classed("hidden", true)
+
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", false)
+    d3.selectAll(".g-triangles-labels").classed("hidden", false)
+
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity',1)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
   })
 
   d3.select("#step-two").on('stepout', function(e){
     console.log("stepping out of step two")
 
-    d3.select("#triangleArrows").classed("hidden", true)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", true)
     d3.selectAll(".g-triangles-labels").classed("hidden", true)
 
-    d3.select("#parkArrows").classed("hidden", false)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", false)
     d3.selectAll(".g-parks-labels").classed("hidden", false)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity',.25)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', .25)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
   })
 
   d3.select("#step-one").on('stepout', function(e){
     console.log("stepping out of step one")
 
-    d3.select("#triangleArrows").classed("hidden", true)
+    d3.selectAll("[data-name='triangleArrows'] path").classed("hidden", true)
     d3.selectAll(".g-triangles-labels").classed("hidden", true)
 
-    d3.select("#parkArrows").classed("hidden", true)
+    d3.selectAll("[data-name='parkArrows'] path").classed("hidden", true)
     d3.selectAll(".g-parks-labels").classed("hidden", true)
 
-    d3.selectAll("#playgroundLots").style('fill', 'gray').style('opacity',1)
-    d3.selectAll("#trianglesLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#commLots").style('fill', 'gray').style('opacity', 1)
-    d3.selectAll("#parkLots").style('fill', 'gray').style('opacity', 1)
+    d3.selectAll("[data-name='playgroundLots'] path").style('fill', '#389B2A').style('opacity',1)
+    d3.selectAll("[data-name='trianglesLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='commLots'] path").style('fill', '#389B2A').style('opacity', 1)
+    d3.selectAll("[data-name='parkLots'] path").style('fill', '#389B2A').style('opacity', 1)
   })
 
 

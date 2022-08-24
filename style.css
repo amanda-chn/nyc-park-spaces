@@ -12,6 +12,7 @@ body {
         padding: 0;
         max-width: 35rem;
         margin: 0 auto;
+        z-index: 1;
       }
 
       .sticky-thing {
@@ -82,7 +83,7 @@ body {
 
         /* my styling */
         .ai2html {
-          max-width: 600px;
+          max-width: 900px;
           margin: auto;
         }
 
@@ -174,7 +175,6 @@ body {
 
         .ai2html .container{
             max-width: 100%;
-            margin: auto;
           }
 
     
