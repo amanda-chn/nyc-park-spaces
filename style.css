@@ -12,6 +12,7 @@ body {
         padding: 0;
         max-width: 35rem;
         margin: 0 auto;
+        z-index: 1;
       }
 
       .sticky-thing {
