@@ -72,6 +72,7 @@ body {
         #scrolly.side-by-side .scrolly-overlay {
           margin-top: 70vh;
           order: 1;
+          z-index: 1;
           /* Change these to adjust sizing options */
           min-width: 15rem;
           max-width: 20rem;
@@ -79,6 +80,7 @@ body {
 
         #scrolly.side-by-side .sticky-thing {
           order: 0;
+          z-index: 0;
           flex-grow: 2;
         }
       }
@@ -169,6 +171,13 @@ body {
           justify-content: center;
         }
 
+        a, li > a {
+          color: #000000!important;
+          /* border-bottom: 1px solid #f0c593; */
+          text-decoration: underline;
+          word-break: break-word;
+        }
+
 
 
 /* mobile */
@@ -192,49 +201,50 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #1d1d1d;
     font-size: 16px;
-}
-
-.title h1{
-  text-align: center;
-  margin: 0 auto; 
-  padding-top: 15rem;
-  padding-bottom: 1rem;
-  font-size: 26px;
-  font-family: 'Poppins', sans-serif;
-  color: #1d1d1d;
-}
-
-.title  h2 {
-  max-width: 300px;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 1rem;
-  font-size: 16px;
-  font-family: 'Lora', serif !important;
-  color: #1d1d1d;
-  text-shadow: 1px 1px 2px white;
-}
-
-.title  h3{
-  max-width: 600px;
-  text-align: center;
-  margin: auto;
-  padding-top: .5rem;
-  padding-bottom: 1rem;
-  font-size: 14px;
-  font-family: 'Poppins', sans-serif;
-  color: #1d1d1d;
-}
-
-.title{
-  /* position: relative; */
-  text-align: center;
-  color: white;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), white), url('image2.jpeg');
-  background-size:cover;
-  background-position: center;
-  min-height: 30vh; 
   }
+
+  .title h1{
+    text-align: center;
+    margin: 0 auto; 
+    padding-top: 15rem;
+    padding-bottom: 1rem;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    color: #1d1d1d;
+    width: 95%;
+    }
+
+  .title  h2 {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1rem;
+    font-size: 16px;
+    font-family: 'Lora', serif !important;
+    color: #1d1d1d;
+    text-shadow: 1px 1px 2px white;
+    }
+
+  .title  h3{
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #1d1d1d;
+    }
+
+  .title{
+    /* position: relative; */
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), white), url('image2.jpeg');
+    background-size:cover;
+    background-position: center;
+    min-height: 30vh; 
+    }
 }
 
 
