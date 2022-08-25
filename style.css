@@ -71,17 +71,17 @@ body {
 
         #scrolly.side-by-side .scrolly-overlay {
           margin-top: 70vh;
-          order: 0;
+          order: 1;
           /* Change these to adjust sizing options */
           min-width: 15rem;
           max-width: 20rem;
-          z-index: 0;
         }
 
         #scrolly.side-by-side .sticky-thing {
-          order: 1;
+          order: 0;
           flex-grow: 2;
         }
+      }
 
         /* my styling */
         .ai2html {
@@ -133,13 +133,6 @@ body {
             font-family: 'Lora', serif !important;
             color: #1d1d1d;
             text-shadow: 1px 1px 2px white;
-        }
-
-        /* img {
-            width: 75%;
-            margin: 0 auto;
-            justify-content: center ;
-    } */
         }
 
         .responsive {
@@ -200,7 +193,6 @@ body {
     color: #1d1d1d;
     font-size: 16px;
 }
-}
 
 .title h1{
   text-align: center;
@@ -241,37 +233,8 @@ body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), white), url('image2.jpeg');
   background-size:cover;
   background-position: center;
-  min-height: 30vh;
-
-
-
-	/* h2 {
-		width: 90%;
-	}
-
-	.chart-row {
-		display:block;
-	}
-
-	.chart-row .chart {
-		padding:0;
-	}
-
-	.photo-section {
-		display:block;
-	}
-	.photo {
-		padding:0;
-	}
-
-	h1.headline {
-		font-size: 24px;
-	}
-
-	h2.subhead {
-		font-size: 16px;
-		line-height: 3vh;
-	} */
+  min-height: 30vh; 
+  }
 }
 
 
