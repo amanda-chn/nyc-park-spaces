@@ -71,7 +71,7 @@ body {
 
         #scrolly.side-by-side .scrolly-overlay {
           margin-top: 70vh;
-          order: 1;
+          /* order: 0; */
           z-index: 1;
           /* Change these to adjust sizing options */
           min-width: 15rem;
@@ -79,8 +79,8 @@ body {
         }
 
         #scrolly.side-by-side .sticky-thing {
-          order: 0;
-          z-index: 0;
+          /* order: 1; */
+          z-index: -1;
           flex-grow: 2;
         }
       }
