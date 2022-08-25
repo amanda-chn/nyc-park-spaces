@@ -12,7 +12,7 @@ body {
         padding: 0;
         max-width: 35rem;
         margin: 0 auto;
-        z-index: 1;
+        z-index: 1 !important;
       }
 
       .sticky-thing {
@@ -21,7 +21,7 @@ body {
         left: 0;
         width: 100%;
         margin: 0;
-        z-index: 0;
+        z-index: 0 !important;
         top: 0;
         height: 100vh;
         /* Center everything inside */
@@ -57,7 +57,7 @@ body {
       .hidden { visibility: hidden; }
 
       /* When it's less than 700 pixels wide, do normal scrollytelling */
-      @media only screen and (min-width: 700px) {
+      @media only screen and (max-width: 750px) {
         #scrolly.side-by-side {
           display: flex;
         }
