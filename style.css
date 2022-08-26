@@ -76,6 +76,7 @@ body {
           /* Change these to adjust sizing options */
           min-width: 15rem;
           max-width: 20rem;
+          position: relative;
         }
 
         #scrolly.side-by-side .sticky-thing {
