@@ -38,6 +38,7 @@ body {
         background-color: #fff;
         color: black;
         z-index: 1;
+        transform: translate3d(0,0,0);
       }
 
       .step p {
